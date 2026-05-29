@@ -50,6 +50,10 @@ export APIFY_API_TOKEN="your_api_key_here"
 uv run python google-maps-directions-api-example.py
 ```
 
+### Explore every input
+
+Once the basic run works, `google-maps-directions-api-cookbook.py` is a runnable catalog of every feature (all travel modes, coordinates and place-ID inputs, avoidance, units, localization, and transit time and routing). See the cookbook table under "Usage Examples" below.
+
 ## Why Use This Google Maps Directions API?
 
 **Every travel mode in one call.** Ask for the best options across modes, or pin a single mode: driving, transit, walking, cycling, flight, or two-wheeler. One request returns every route option Google offers for your origin and destination.
@@ -101,6 +105,32 @@ uv run python google-maps-directions-api-example.py
   "gl": "us"
 }
 ```
+
+### Run every input from Python (cookbook)
+
+`google-maps-directions-api-cookbook.py` is a runnable catalog that exercises every input the API supports, with a clean printed summary per route. Run one example by name, or `all`:
+
+```bash
+uv run python google-maps-directions-api-cookbook.py            # runs 'basic'
+uv run python google-maps-directions-api-cookbook.py walking
+uv run python google-maps-directions-api-cookbook.py all        # runs every example (each is billed)
+```
+
+| Example | What it shows |
+|---|---|
+| `basic` | Best routes across all modes (the default) |
+| `driving` | Driving only, distances in miles |
+| `walking` | Walking directions |
+| `cycling` | Cycling directions |
+| `two_wheeler` | Two-wheeler (motorcycle/scooter; select regions like India) |
+| `transit` | Public transit directions |
+| `transit_advanced` | Transit with arrive-by time, preferred mode, and less walking |
+| `flight` | Flight option for a long-haul route |
+| `coordinates` | Origin and destination as latitude,longitude |
+| `place_ids` | Origin and destination as Google Maps place IDs |
+| `avoid` | Avoid tolls, highways, and ferries |
+| `depart_at` | Future departure time (traffic-aware ETA) |
+| `localized` | Kilometers and French instructions |
 
 ## Input Parameters
 
