@@ -223,7 +223,7 @@ The `actors` and `docs` tools let the assistant discover and read Apify docs, wh
 
 ## Install in Claude Cowork Desktop
 
-![Install in Claude Cowork Desktop](screenshots/01-claude-cowork-desktop.png)
+![Install in Claude Cowork Desktop](https://raw.githubusercontent.com/johnisanerd/ApifyPublicData/main/assets/guides/install_mcp_into_claude_desktop.png)
 
 Cowork is the desktop app's automation mode. To give it the Google Maps Directions API as a tool, add the Apify MCP server as a connector.
 
@@ -255,7 +255,7 @@ More help: https://docs.apify.com/platform/integrations/claude-desktop
 
 ## Install in Claude Code
 
-![Install in Claude Code](screenshots/02-claude-code.png)
+![Install in Claude Code](https://raw.githubusercontent.com/johnisanerd/ApifyPublicData/main/assets/guides/install_mcp_into_claude_code.png)
 
 Claude Code is the command-line tool. Add the Actor's MCP server with one command:
 
@@ -279,7 +279,7 @@ Claude Code MCP docs: https://code.claude.com/docs/en/mcp
 
 ## Install in Claude (website)
 
-![Install in Claude website](screenshots/03-claude-website.png)
+![Install in Claude (website)](https://raw.githubusercontent.com/johnisanerd/ApifyPublicData/main/assets/guides/install_mcp_into_claude_ai.png)
 
 On claude.ai you add Apify as a connector, then enable just this Actor's tool.
 
@@ -293,7 +293,7 @@ Open Claude on the web: https://claude.ai
 
 ## Install in Cursor
 
-![Install in Cursor](screenshots/04-cursor.png)
+![Install in Cursor](https://raw.githubusercontent.com/johnisanerd/ApifyPublicData/main/assets/guides/install_mcp_into_cursor.png)
 
 Cursor reads MCP servers from a project file at `.cursor/mcp.json`.
 
@@ -326,6 +326,22 @@ Cursor reads MCP servers from a project file at `.cursor/mcp.json`.
 4. In Composer or Chat, ask Cursor to call the Google Maps Directions API.
 
 New to Cursor? Get it here: https://cursor.com/referral?code=XQP4VBLI3NNX
+
+## Install in ChatGPT
+
+![Install in ChatGPT](https://raw.githubusercontent.com/johnisanerd/ApifyPublicData/main/assets/guides/install_mcp_into_ChatGPT.png)
+
+ChatGPT connects to the Apify MCP server through Developer mode (available on ChatGPT Pro, Plus, Business, Enterprise, and Education plans).
+
+1. Click your profile icon, then go to **Settings > Apps**. If you do not see a **Create app** button, open **Advanced settings** and enable **Developer mode**.
+2. Click **Create app** and fill out the form:
+   - **Name:** Apify
+   - **MCP Server URL:** `https://mcp.apify.com/?tools=actors,docs,johnvc/google-maps-directions-api`
+   - **Authentication:** OAuth
+3. Click **Create** and authorize the connection with Apify.
+4. To use the app in a conversation, click **+** in the chat, choose **Developer mode**, and select **Apify**.
+
+More help: https://docs.apify.com/platform/integrations/mcp
 
 ---
 
