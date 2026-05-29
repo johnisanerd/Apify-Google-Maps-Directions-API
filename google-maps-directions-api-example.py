@@ -39,8 +39,9 @@ run_input = {
 # Run the Actor and wait for it to finish
 run = client.actor("johnvc/google-maps-directions-api").call(run_input=run_input)
 
-# Read structured results from the run's default dataset
-items = list(client.dataset(run["defaultDatasetId"]).iterate_items())
+# Read structured results from the run's default dataset.
+# apify-client 3.x returns a typed Run object, so use the attribute (not run["defaultDatasetId"]).
+items = list(client.dataset(run.default_dataset_id).iterate_items())
 print(f"Returned {len(items)} item(s).\n")
 
 # Each run returns one row describing the route options for the request.
