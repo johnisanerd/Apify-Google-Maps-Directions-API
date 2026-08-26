@@ -349,4 +349,4 @@ More help: https://docs.apify.com/platform/integrations/mcp
 
 *Use the Google Maps Directions API to power your routing, logistics, and travel workflows with reliable, structured results.*
 
-Last Updated: 2026.08.25
+Last Updated: 2026.08.26
